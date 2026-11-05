@@ -1,4 +1,4 @@
-<div class="w-104.5 max-w-full max-md:w-full">
+<div class="organic-order-summary w-104.5 max-w-full max-md:w-full">
     {!! view_render_event('bagisto.shop.checkout.cart.summary.title.before') !!}
 
     <p

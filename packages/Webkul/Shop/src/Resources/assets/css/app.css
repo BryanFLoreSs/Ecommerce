@@ -3,6 +3,7 @@
  * `src/DataGrids` — the menu and datagrid icons — are seen too.
  */
 @import "tailwindcss" source("../../../");
+@import "./organic.css";
 
 @theme {
     /**
@@ -24,16 +25,16 @@
     /**
      * Colours — the palette of named colours used in the storefront.
      */
-    --color-navyBlue:    #060C3B;
-    --color-lightOrange: #F6F2EB;
-    --color-darkGreen:   #40994A;
+    --color-navyBlue:    #294D3D;
+    --color-lightOrange: #F1EEE5;
+    --color-darkGreen:   #3E7153;
     --color-darkBlue:    #0044F2;
     --color-darkPink:    #F85156;
 
     /**
      * Fonts — the named families the storefront can ask for by utility.
      */
-    --font-poppins: "Poppins", sans-serif;
+    --font-poppins: "DM Sans", sans-serif;
     --font-dmserif: "DM Serif Display", serif;
 
     /**

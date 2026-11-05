@@ -34,6 +34,8 @@
         {{ $channel->home_seo['meta_title'] ?? '' }}
     </x-slot>
 
+    <div class="organic-home">
+
     <!-- Storefront Sections -->
     @foreach ($sections as $section)
         @php
@@ -54,10 +56,7 @@
         @switch ($section->type)
             @case (\Webkul\Theme\Enums\SectionTypeEnum::IMAGE_CAROUSEL->value)
                 <!-- Image Carousel -->
-                <x-shop::carousel
-                    :options="$section->getTypeInstance()?->sanitize((array) $data) ?? $data"
-                    aria-label="{{ trans('shop::app.home.index.image-carousel') }}"
-                />
+                @include('shop::home.organic-hero', ['options' => $section->getTypeInstance()?->sanitize((array) $data) ?? $data])
 
                 @break
             @case (\Webkul\Theme\Enums\SectionTypeEnum::STATIC_CONTENT->value)
@@ -102,6 +101,8 @@
             </div>
         @endif
     @endforeach
+
+    </div>
 
     @if ($preview ?? false)
         @include('shop::home.preview-bridge')

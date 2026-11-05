@@ -68,12 +68,12 @@
 
         <link
             rel="preload" as="style"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
         />
 
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
         />
 
         @stack('styles')
@@ -92,7 +92,7 @@
 
     </head>
 
-    <body>
+    <body class="organic-store">
         {!! view_render_event('bagisto.shop.layout.body.before') !!}
 
         <a

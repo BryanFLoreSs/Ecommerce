@@ -15,13 +15,13 @@
         id="v-categories-carousel-template"
     >
         <div
-            class="container mt-14 max-lg:px-8 max-md:mt-7 max-md:px-0! max-sm:mt-5"
+            class="organic-categories container mt-14 max-lg:px-8 max-md:mt-7 max-md:px-0! max-sm:mt-5"
             v-if="! isLoading && categories?.length"
         >
             <div class="relative">
                 <div
                     ref="swiperContainer"
-                    class="scrollbar-hide flex gap-10 overflow-auto scroll-smooth max-lg:gap-4"
+                    class="organic-category-track scrollbar-hide flex gap-10 overflow-auto scroll-smooth max-lg:gap-4"
                 >
                     <div
                         class="grid min-w-30 max-w-30 grid-cols-1 justify-items-center gap-4 font-medium max-md:min-w-20 max-md:max-w-20 max-md:gap-2.5 max-md:first:ml-4 max-sm:min-w-15 max-sm:max-w-15 max-sm:gap-1.5"

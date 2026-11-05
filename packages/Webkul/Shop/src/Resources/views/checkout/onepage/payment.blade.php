@@ -39,9 +39,9 @@
     
                     <!-- Accordion Blade Component Content -->
                     <x-slot:content class="mt-8 p-0! max-md:mt-0 max-md:rounded-t-none max-md:border max-md:border-t-0 max-md:p-4!">
-                        <div class="flex flex-wrap gap-7 max-md:gap-4 max-sm:gap-2.5">
+                        <div class="organic-payment-grid flex flex-wrap gap-7 max-md:gap-4 max-sm:gap-2.5">
                             <div 
-                                class="relative cursor-pointer max-md:max-w-full max-md:flex-auto"
+                                class="organic-payment-option relative cursor-pointer max-md:max-w-full max-md:flex-auto"
                                 v-for="(payment, index) in methods"
                             >
                                 {!! view_render_event('bagisto.shop.checkout.payment-method.before') !!}

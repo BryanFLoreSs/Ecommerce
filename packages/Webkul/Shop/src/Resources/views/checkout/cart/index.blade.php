@@ -19,7 +19,7 @@
 
     <!-- Page Header -->
     <div class="flex flex-wrap">
-        <div class="flex w-full justify-between border border-b border-l-0 border-r-0 border-t-0 px-15 py-4 max-lg:px-8 max-md:px-4">
+        <div class="organic-checkout-header flex w-full justify-between border border-b border-l-0 border-r-0 border-t-0 px-15 py-4 max-lg:px-8 max-md:px-4">
             <div class="flex items-center gap-x-14 max-1180:gap-x-9">
                 {!! view_render_event('bagisto.shop.checkout.cart.logo.before') !!}
 
@@ -48,7 +48,12 @@
     {!! view_render_event('bagisto.shop.checkout.cart.header.after') !!}
 
     <div class="flex-auto">
-        <div class="container px-15 max-lg:px-8 max-md:px-4">
+        <div class="organic-cart-content container px-15 max-lg:px-8 max-md:px-4">
+        <div class="organic-page-heading">
+            <p class="organic-eyebrow">@lang('shop::organic.cart-eyebrow')</p>
+            <h1>@lang('shop::app.checkout.cart.index.cart')</h1>
+            <p>@lang('shop::organic.cart-description')</p>
+        </div>
 
             {!! view_render_event('bagisto.shop.checkout.cart.breadcrumbs.before') !!}
 
@@ -173,7 +178,7 @@
 
                             <!-- Cart Item Listing Container -->
                             <div
-                                class="grid gap-y-6"
+                                class="organic-cart-item grid gap-y-6"
                                 v-for="item in cart?.items"
                             >
                                 <div class="flex justify-between gap-x-2.5 border-b border-zinc-200 pb-5">
@@ -434,16 +439,10 @@
 
                     <!-- Empty Cart Section -->
                     <div
-                        class="m-auto grid w-full place-content-center items-center justify-items-center py-32 text-center"
+                        class="organic-empty-cart m-auto grid w-full place-content-center items-center justify-items-center py-32 text-center"
                         v-else
                     >
-                        <img
-                            class="max-md:h-25 max-md:w-25"
-                            src="{{ bagisto_asset('images/thank-you.png') }}"
-                            alt="@lang('shop::app.checkout.cart.index.empty-product')"
-                            loading="lazy"
-                            decoding="async"
-                        />
+                        <span class="organic-empty-icon icon-cart" aria-hidden="true"></span>
 
                         <p
                             class="text-xl max-md:text-sm"
@@ -451,6 +450,12 @@
                         >
                             @lang('shop::app.checkout.cart.index.empty-product')
                         </p>
+
+                        <p>@lang('shop::organic.empty-cart-description')</p>
+
+                        <a class="primary-button" href="{{ route('shop.search.index') }}">
+                            @lang('shop::organic.continue-shopping')
+                        </a>
                     </div>
                 </template>
             </div>

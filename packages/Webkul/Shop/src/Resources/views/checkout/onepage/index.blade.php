@@ -19,7 +19,7 @@
 
     <!-- Page Header -->
     <div class="flex-wrap">
-        <div class="flex w-full justify-between border border-b border-l-0 border-r-0 border-t-0 px-15 py-4 max-lg:px-8 max-sm:px-4">
+        <div class="organic-checkout-header flex w-full justify-between border border-b border-l-0 border-r-0 border-t-0 px-15 py-4 max-lg:px-8 max-sm:px-4">
             <div class="flex items-center gap-x-14 max-1180:gap-x-9">
                 <a
                     href="{{ route('shop.home.index') }}"
@@ -44,7 +44,12 @@
     {!! view_render_event('bagisto.shop.checkout.onepage.header.after') !!}
 
     <!-- Page Content -->
-    <div class="container px-15 max-lg:px-8 max-sm:px-4">
+    <div class="organic-checkout container px-15 max-lg:px-8 max-sm:px-4">
+        <div class="organic-page-heading">
+            <p class="organic-eyebrow">@lang('shop::organic.checkout-eyebrow')</p>
+            <h1>@lang('shop::app.checkout.onepage.index.checkout')</h1>
+            <p>@lang('shop::organic.checkout-description')</p>
+        </div>
 
         {!! view_render_event('bagisto.shop.checkout.onepage.breadcrumbs.before') !!}
 
@@ -100,7 +105,7 @@
                     </div>
 
                     <!-- Included Checkout Summary Blade File For Desktop view -->
-                    <div class="sticky top-8 block h-max w-110.5 max-w-full max-lg:w-auto max-lg:max-w-110.5 ltr:pl-8 max-lg:ltr:pl-0 rtl:pr-8 max-lg:rtl:pr-0">
+                    <div class="organic-order-summary sticky top-8 block h-max w-110.5 max-w-full max-lg:w-auto max-lg:max-w-110.5 ltr:pl-8 max-lg:ltr:pl-0 rtl:pr-8 max-lg:rtl:pr-0">
                         <div class="block max-md:hidden">
                             @include('shop::checkout.onepage.summary')
                         </div>
