@@ -79,6 +79,11 @@
             <directory suffix="Test.php">packages/Webkul/PayGlocal/tests/Feature</directory>
         </testsuite>
 
+        <!-- Payment package testsuites. -->
+        <testsuite name="Payment Feature Test">
+            <directory suffix="Test.php">packages/Webkul/Payment/tests/Feature</directory>
+        </testsuite>
+
         <!-- Paypal package testsuites. -->
         <testsuite name="Paypal Feature Test">
             <directory suffix="Test.php">packages/Webkul/Paypal/tests/Feature</directory>

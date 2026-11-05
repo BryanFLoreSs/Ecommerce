@@ -15,6 +15,10 @@ class PaymentServiceProvider extends ServiceProvider
     {
         include __DIR__.'/../Http/helpers.php';
 
+        $this->loadRoutesFrom(__DIR__.'/../Routes/paymongo.php');
+
+        $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'payment');
+
         $this->app->register(EventServiceProvider::class);
     }
 
@@ -37,6 +41,10 @@ class PaymentServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(
             dirname(__DIR__).'/Config/payment-methods.php', 'payment_methods'
+        );
+
+        $this->mergeConfigFrom(
+            dirname(__DIR__).'/Config/system.php', 'core'
         );
     }
 }

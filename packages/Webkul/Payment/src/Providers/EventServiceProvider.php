@@ -4,6 +4,7 @@ namespace Webkul\Payment\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Webkul\Payment\Listeners\CancelPaymongoCheckout;
 use Webkul\Payment\Listeners\GenerateInvoice;
 
 class EventServiceProvider extends ServiceProvider
@@ -16,5 +17,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         Event::listen('checkout.order.save.after', [GenerateInvoice::class, 'handle']);
+
+        Event::listen('sales.order.cancel.before', [CancelPaymongoCheckout::class, 'handle']);
     }
 }
