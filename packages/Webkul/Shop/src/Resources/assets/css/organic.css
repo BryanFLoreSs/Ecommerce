@@ -331,6 +331,7 @@
     padding: 16px;
     gap: 8px;
     transform: none;
+    translate: none;
     background: #fffefa;
 }
 
